@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+}
+
+header h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 3em;
+    text-align: center;
+}
+
+.hero img {
+    height: 50%;
+    width: 100%;
+    opacity: 75%;
+}
