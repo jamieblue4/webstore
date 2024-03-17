@@ -2,14 +2,89 @@
     margin: 0;
 }
 
+header {
+    background-color: #111;
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+button .openBtn {
+    margin-right: 1em;
+}
+
 header h1 {
     font-family: 'Courier New', Courier, monospace;
     font-size: 3em;
     text-align: center;
+    background-color: #111;
+    color: white;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    margin-right: 1em;
+}
+
+.sidepanel {
+    height: 250px;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+.sidepanel a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidepanel a:hover {
+    color: #f1f1f1;
+}
+
+.sidepanel .closeBtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.openBtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+}
+
+.openBtn:hover {
+    background-color: #444;
 }
 
 .hero img {
     height: 50%;
     width: 100%;
     opacity: 75%;
+}
+
+h1 {
+    text-align: center;
+    font-size: 35px;
+    font-family: 'Courier New', Courier, monospace;
+    padding-top: 0.5em;
+}
+
+img .kendrick_lamar {
+ display: flex;
+ height: 25%;
 }
