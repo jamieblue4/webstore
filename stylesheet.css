@@ -17,11 +17,12 @@ header h1 {
     font-family: 'Courier New', Courier, monospace;
     font-size: 3em;
     display: flex;
-    text-align: center;
     background-color: #111;
     color: white;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
+    padding-right: 8em;
+    padding-left: 1em;
 }
 
 .sidepanel {
@@ -90,7 +91,23 @@ h1 {
 }
 
 img {
- width: 300px;
+ width: 400px;
  height: 400px;
  object-fit: contain;
+}
+
+h3 {
+    text-align: center;
+}
+
+h4 {
+    text-align: center;
+}
+
+.addToCart {
+    display: block;
+    margin: auto;
+    border-radius: 1em;
+    padding: 0.35em;
+    background-color: #D2D8D0;
 }
