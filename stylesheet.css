@@ -85,6 +85,10 @@ h1 {
     padding-top: 0.5em;
 }
 
+a {
+        text-decoration: none;
+}
+
 .products {
     display: grid;
     justify-content: center;
