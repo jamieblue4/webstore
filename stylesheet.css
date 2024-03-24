@@ -115,3 +115,20 @@ h4 {
     padding: 0.35em;
     background-color: #D2D8D0;
 }
+
+.cart-button {
+    background-color: black;
+    color: white;
+    padding: 1em;
+    border: none;
+    font-size: 18px;
+}
+
+.cart {
+    background-color: #949694;
+    color: black;
+    padding: 1em;
+    max-width: 50%;
+    display: block;
+    margin: auto;
+}

@@ -16,34 +16,42 @@
 
     <button class="openBtn" onclick="openNav()">&#9776; Menu</button>
     <a href="index.html"><h1>Sky Blue Music Store</h1></a>
+    <button class="cart-button" id="yourCartButton" onclick="openCart()">
+        <div class="cart-counter">Cart (0)</div>
+    </button>
 </header>
 <body>
+    <div class="cart">
+        <h3>Cart</h3>
+        <div class="cart-items"></div>
+        <div class="cart-total"></div>
+    </div>
     <h1>Shop</h1>
     <div class="products">
         <div class="product-container">
             <img class="kendrick_lamar" src="good_kid.jpeg">
-            <button class="addToCart">Add To Cart</button>
+            <button class="addToCart" onclick="addToCart(0)">Add To Cart</button>
             <h3>good kid, m.A.A.d city</h3>
             <h4>Kendrick Lamar</h4>
             <h3>$19.99</h3>
         </div>
         <div class="product-container">
             <img class="tame_impala" src="currents.png">
-            <button class="addToCart">Add To Cart</button>
+            <button class="addToCart" onclick="addToCart(1)">Add To Cart</button>
             <h3>Currents</h3>
             <h4>Tame Impala</h4>
             <h3>$14.99</h3>
         </div>
         <div class="product-container">
             <img class="carter_vail" src="tennis_champ.jpeg">
-            <button class="addToCart">Add To Cart</button>
+            <button class="addToCart" onclick="addToCart(2)">Add To Cart</button>
             <h3>The Interstellar Tennis Championship</h3>
             <h4>Carter Vail</h4>
             <h3>$19.99</h3>
         </div>
         <div class="product-container">
             <img class="fall_out_boy" src="Infinityonhigh.jpg">
-            <button class="addToCart">Add To Cart</button>
+            <button class="addToCart" onclick="addToCart(3)">Add To Cart</button>
             <h3 id="album-title">Infinity On High</h3>
             <h4>Fall Out Boy</h4>
             <h3 id="price">$14.99</h3>
