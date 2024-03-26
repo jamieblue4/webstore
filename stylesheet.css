@@ -143,6 +143,13 @@ h4 {
     transition: 0.5s;
 }
 
+.close-cart {
+    text-decoration: none;
+    color: white;
+    font-size: 28px;
+    margin-left: 37em;
+}
+
 .cart-total {
     font-size: 26px;
     font-weight: 25px;

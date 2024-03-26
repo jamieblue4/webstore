@@ -6,6 +6,11 @@ function closeNav() {
     document.getElementById("navSidepanel").style.width = "0";
 }
 
+function closeCart() {
+    var cart = document.querySelector('.cart');
+   cart.style.display = "none";
+}
+
 // open cart on click and hide accordingly
 function openCart() {
     var cart = document.querySelector('.cart');
