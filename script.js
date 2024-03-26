@@ -22,34 +22,32 @@ var shop = document.querySelector('.products');
 var cartItems = document.querySelector('.cart-items');
 var total = document.querySelector('.cart-total');
 
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-
 // Products in shop
 const product = [
     {
         id: 0,
+        image: 'good_kid.jpeg',
         name: 'good kid, m.A.A.d city',
         artist: 'Kendrick Lamar',
         price: 19.99,
     },
     {
         id: 1,
+        image: 'currents.png',
         name: 'Currents',
         artist: 'Tame Impala',
         price: 14.99,
     },
     {
         id: 2,
+        image: 'tennis_champ.jpeg',
         name: 'The Intersteallar Tennis Championship',
         artist: 'Carter Vail',
         price: 19.99,
     },
     {
         id: 3,
+        image: 'inifinityonhigh.jpg',
         name: 'Infinity On High',
         artist: 'Fall Out Boy',
         price: 14.99,
@@ -64,13 +62,11 @@ updateCart();
 function addToCart(id) {
     // see if item is already in cart
     if(cart.some((item) => item.id === id)){
-        changeNumberOfUnits("plus", id);
     } else {
-        const item = product.find((product) => product.id === id);
+        const item = product.find((item) => item.id === id);
 
         cart.push({
             ...item,
-            numberOfUnits: 1,
         });
       }
       updateCart();
@@ -93,6 +89,7 @@ function renderTotal() {
     cart.forEach((item) => {
         totalPrice += item.price * item.numberOfUnits;
         totalItems += item.numberOfUnits;
+
     });
 
     total.innerHTML = `
@@ -104,55 +101,21 @@ function renderTotal() {
 
 // render cart items
 function renderCartItems() {
-    cartItems.innerHTML = "";
-    cart.forEach((item) => {
-        cartItems.innerHTML += `
-            <div class="cart-content" style="padding:1rem; display:inline;">
-            <h4 class="cart-name" onclick="removeItemFromCart(${item.id})">
-            Item: 
-            ${item.name}
-            </h4>
-            <h4 class="cart-artist>
-            Artist:
-            ${item.artist}
-            </h4>
-            <h4 class="cart-price" onclick="removeItemFromCart(${item.id})">
-            Price: 
-            ${item.price}
-            </h6>
-            <div class="quantity" style="display: inline; text-align: center;">
-            Quantity
-            <button type="button" id="btn-plus" style="display: inline; margin: auto;" onclick="changeNumberOfUnits('plus', ${item.id})">+</button>
-            ${item.numberOfUnits}
-            <button type="button" id="btn-minus" style="display: inline; margin: auto;" onclick="changeNumberOfUnits('minus', ${item.id})">-</button>
-            </div>
-            <button type="button" class="remove-button style="display: inline; margin: auto; border-radius: 0.75em;" id="removeButton" onclick="removeItemFromCart(${item.id})">Remove</button>
-        </div>
-            `;
+    if(cart.length==0) {
+        cartItems.innerHTML = "";
+        cart.forEach((item) => {
+            cartItems.innerHTML += `
+                <div class="cart-content" style="padding:1rem; display:inline;">
+                <h4 class="cart-name" onclick="removeItemFromCart(${item.id})">
+                Item: 
+                ${item.name}
+                </h4>
+                <h4 class="cart-price" onclick="removeItemFromCart(${item.id})">
+                Price: 
+                ${item.price}
+                </h6>`;
     }
     );
-}
-
-// change number of units function
-function changeNumberOfUnits(action, id) {
-    cart = cart.map((item) => {
-
-        let numberOfUnits = item.numberOfUnits;
-
-        if(item.id === id) {
-            if(action === "minus") {
-                numberOfUnits--;
-            } else if(action === "plus") {
-                numberOfUnits++;
-            }
-        }
-        return {
-            ...item,
-            numberOfUnits,
-        };
-    });
-
-    updateCart();
 }
 
 // remove item from cart
@@ -179,4 +142,4 @@ checkoutButton.onclick = function clearCart() {
     alert('Thank you for your purchase!');
 
     updateCart();
-}
+}}

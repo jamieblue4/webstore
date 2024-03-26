@@ -92,6 +92,7 @@ a {
 .products {
     display: grid;
     justify-content: center;
+    margin-top: 0.5em;
 }
 
 img {
@@ -108,7 +109,7 @@ h4 {
     text-align: center;
 }
 
-.addToCart {
+.add-btn {
     display: block;
     margin: auto;
     border-radius: 1em;
@@ -125,10 +126,25 @@ h4 {
 }
 
 .cart {
-    background-color: #949694;
-    color: black;
-    padding: 1em;
-    max-width: 50%;
     display: block;
     margin: auto;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    padding: 1em;
+    max-width: 90%;
+    height: 400px;
+    width: 75%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.cart-total {
+    font-size: 26px;
+    font-weight: 25px;
+    text-align: center;
 }
