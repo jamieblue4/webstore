@@ -151,7 +151,7 @@ h4 {
     text-decoration: none;
     color: white;
     font-size: 28px;
-    margin-left: 37em;
+    position: relative;
 }
 
 .cart-total {
