@@ -125,6 +125,10 @@ h4 {
     font-size: 18px;
 }
 
+.cart-counter {
+    cursor: pointer;
+}
+
 .cart {
     display: block;
     margin: auto;
